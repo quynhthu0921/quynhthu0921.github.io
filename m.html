@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chill Playlist</title>
+  <meta http-equiv="imagetoolbar" content="no" />
+  <link rel="stylesheet" href="./music.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Itunes-music-app-icon.png/480px-Itunes-music-app-icon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css" />
+</head>
+<body>
+<header id="nav-bar">
+    <a class="logo" href="/" tabindex="-1">
+        <h3 style="display: inline; position: absolute;"><a class="footer-home" href="/">Chill with speed up<span style="color: tomato;"><b> Playlist</b></span></a></h3>
+      </a>
+      <nav>
+          <ul class="nav__links">
+              <li><a href="#" id="home-btn" style="border-bottom: 2px solid tomato; color: tomato; filter: brightness(1.45); font-weight: bold;" href="/">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#" id="about-btn" style="cursor: pointer;" onclick="scrollAbout();">About</a></li>
+          </ul>
+      </nav>
+</header>
+
+  <div class="wrapper">
+
+    <div class="top-bar">
+      <button id="volumeBtn" onclick="showVolume(); closeVolumeBtn();" title="Âm lượng"><i class="fas fa-volume-up"></i></button>
+      <button id="closeVolumeBtn" style="display: none;" onclick="closeVolume();" title="Đóng"><i id="x-mark-volume" class="fa-solid fa-xmark" style="color: #515C6F; display: inline-block; font-size: 32px;"></i></button>
+      <button style="visibility: hidden;" id="mobileBtn"><i class="fa-solid fa-angles-right"></i></button>
+      <span>Đang phát</span>
+      <button id="infoBtn" onclick="showInfo(); closeInfoBtn();" title="Thông tin"><i class="fa-solid fa-circle-info"></i></button>
+      <button id="closeInfoBtn" style="display: none;" onclick="closeInfo();" title="Đóng"><i id="x-mark-volume" class="fa-solid fa-xmark" style="color: #515C6F; display: inline-block; font-size: 32px;"></i></button>
+    </div>
+    
+    <div class="volume-box" id="volume-box">
+        <div class="slider-container">
+          <span class="bar"><span class="fill"></span></span>
+          <input id="slider" class="slider" type="range" max="100" value="50" title="Âm lượng">
+        </div>
+      <p id="volume-all-txt">Âm lượng: <span id="volume-txt"></span></p>
+    </div>
+
+    <div class="info-box1" id="info-box1">
+    </div>
+
+    <div class="img-area">
+      <img id="imgMusic" src="" alt="">
+    </div>
+    
+    <div class="song-details">
+      <p class="name"></p> 
+      <p class="artist"></p>
+    </div>
+
+    <div class="progress-area">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
+      </div>
+
+      <div class="song-timer" draggable="false">
+        <span class="current-time" draggable="false">0:00</span>
+        <span class="max-duration" draggable="false">0:00</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <i id="shuffle-plist" class="material-icons" title="Phát ngẫu nhiên">shuffle</i>
+      <i id="prev" class="material-icons" title="Bài trước">skip_previous</i>
+      <div class="play-pause">
+        <i class="material-icons play">play_arrow</i>
+      </div>
+      <i id="next" class="material-icons" title="Bài sau">skip_next</i>
+      <i id="more-music" class="material-icons" title="Danh sách nhạc">queue_music</i>
+    </div>
+    <div class="music-list">
+      <div class="header">
+        <div class="row">
+          <i class= "list material-icons">Chill_music</i>
+          <span class="head-list">Danh sách nhạc</span>
+        </div>
+        <i id="toTopList" title="Lên trên" class="material-icons">vertical_align_top</i>
+        <i id="close" title="Đóng" class="material-icons">close</i>
+      </div>
+      <ul id="list">
+        <!-- List nhạc -->
+        <div class="mobile-hint" style="display: block; margin-top: 0px; margin-bottom: 5px;">
+          <p id="yw" style="text-align: center; color: sandybrown;"><i>&#9834 Chill một chút thoyyyy &#9835</i></p>
+        </div>
+        <script src="./listmusic.js"></script>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="mobile-hint">
+    <p style="text-align: center;"><i>&#9834 Chill một chút thoyyyy &#9835</i></p>
+  </div>
+
+  <div class="info-box" id="info-box">
+  </div>
+
+<!-- Footer -->
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+        <h3><a class="footer-home" href="/">Chill with speed up<span><b style="color: tomato;"> Playlist</b></span></a></h3>
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+          <span class="bullet">&bullet;</span>
+          <a href="#" class="link-1" style="color: sandybrown;" >Contact</a>
+          <p style="color: indianred;">Call me babeee :33</p>
+        </p>
+      </div>
+    
+    <div class="footer-center">
+    <div>
+      <h3 style="color:lightskyblue; font-size: 24px; margin-bottom: 10px; font-weight: normal;">Thông tin liên hệ:</h3>
+    </div>
+    
+    <div>
+      <i class="fas fa-mobile-alt"></i>
+      <p><a href="#" >+123456789</a></p>
+    </div>
+    
+    <div>
+      <i class="fas fa-envelope"></i>
+      <p><a href="#">chillmusic@gmail.com</a></p>
+    </div>
+    </div>
+    
+
+  <div class="footer-right">
+
+    <p class="footer-company-about" style="color:sandybrown;">
+        <span style="color: lightskyblue;">About</span>
+        Chill một chút thoyyyy
+      </p>
+
+    <div class="footer-icons">
+
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+  
+    </div>
+
+  </div>
+
+</footer>
+
+  <script src="./music.js"></script>
+  <script src="./listmusic.js"></script>
+
+</body>
+</html>
