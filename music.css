@@ -106,69 +106,7 @@ body header {
   filter: brightness(1.45);
 }
 
-.cta {
-  padding: 9px 25px;
-  background: linear-gradient(90deg, tomato 0%, sandybrown 100%);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
 
-.cta:hover {
-  background: linear-gradient(90deg, tomato 0%, sandybrown 100%);
-  filter: brightness(1.20);
-  transition: all 0.3s ease 0s;
-}
-
-/* Mobile Nav */
-
-.menu {
-  display: none;
-}
-
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  background-color: #24252a;
-  overflow-x: hidden;
-  transition: width 0.5s ease 0s;
-}
-
-.overlay--active {
-  width: 100%;
-}
-
-.overlay__content {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay a {
-  padding: 15px;
-  font-size: 36px;
-  display: block;
-  transition: color 0.3s ease 0s;
-}
-
-.overlay a:hover,
-.overlay a:focus {
-  color: #0088a9;
-}
-.overlay .close {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  color: #edf0f1;
-}
 .wrapper{
   margin-top: 7px;
   margin-left: auto;
@@ -186,13 +124,7 @@ body header {
 }
 .top-bar {
   z-index: 1;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-          user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
+
 }
 .top-bar, .progress-area .song-timer, 
 .controls, .music-list .header, .music-list ul li{
@@ -200,16 +132,7 @@ body header {
   align-items: center;
   justify-content: space-between;
 }
-.music-list {
-        /* Disable highlighted text */
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-          -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently
-                                      supported by Chrome, Edge, Opera and Firefox */
-}
+
 #list {
   scroll-behavior: smooth;
 }
@@ -240,21 +163,11 @@ body header {
   margin-top: 25px;
   border-radius: 15px;
   box-shadow: 0px 6px 12px var(--lightbshadow);
-  pointer-events: none;
-          /* Disable highlighted text */
-          -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari */
-          -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Old versions of Firefox */
-              -ms-user-select: none; /* Internet Explorer/Edge */
-                  user-select: none; /* Non-prefixed version, currently
-                                        supported by Chrome, Edge, Opera and Firefox */
 }
 .img-area img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none;
 }
 .song-details{
   text-align: center;
@@ -267,13 +180,6 @@ body header {
   font-size: 21px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
-  -webkit-touch-callout: text; /* iOS Safari */
-  -webkit-user-select: text; /* Safari */
-  -khtml-user-select: text; /* Konqueror HTML */
-    -moz-user-select: text; /* Old versions of Firefox */
-      -ms-user-select: text; /* Internet Explorer/Edge */
-          user-select: text; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
 }
 .song-details .artist{
   font-size: 18px;
@@ -281,13 +187,6 @@ body header {
   margin-top: 5px;
   line-height: 20px;
   font-family: 'Inter', sans-serif;
-  -webkit-touch-callout: text; /* iOS Safari */
-  -webkit-user-select: text; /* Safari */
-  -khtml-user-select: text; /* Konqueror HTML */
-    -moz-user-select: text; /* Old versions of Firefox */
-      -ms-user-select: text; /* Internet Explorer/Edge */
-          user-select: text; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
 }
 .progress-area{
   height: 6px;
@@ -328,42 +227,20 @@ body header {
   margin-top: 2px;
   pointer-events: none;
   cursor: none;
-          /* Disable highlighted text */
-          -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari */
-          -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Old versions of Firefox */
-              -ms-user-select: none; /* Internet Explorer/Edge */
-                  user-select: none; /* Non-prefixed version, currently
-                                        supported by Chrome, Edge, Opera and Firefox */
 }
 .song-timer {
   pointer-events: none;
   cursor: none;
-          /* Disable highlighted text */
-          -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari */
-          -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Old versions of Firefox */
-              -ms-user-select: none; /* Internet Explorer/Edge */
-                  user-select: none; /* Non-prefixed version, currently
-                                        supported by Chrome, Edge, Opera and Firefox */
 }
 .fas.fa-volume-up {
-  display: inline-block;
   background: -webkit-gradient(linear, left top, left bottom, from(var(--aqua)), to(var(--darkblue)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 28px;
-  cursor: pointer;
 }
 .fa-solid.fa-circle-info {
-  display: inline-block;
   background: -webkit-gradient(linear, left top, left bottom, from(var(--aqua)), to(var(--darkblue)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 30px;
-  cursor: pointer;
 }
 .fa-solid.fa-circle-check {
   color: rgb(40, 200, 255);
@@ -381,14 +258,6 @@ body header {
   border-radius: 20px;
   box-shadow: 0px 6px 12px var(--lightbshadow);
   z-index: 9999;
-          /* Disable highlighted text */
-          -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari */
-          -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Old versions of Firefox */
-              -ms-user-select: none; /* Internet Explorer/Edge */
-                  user-select: none; /* Non-prefixed version, currently
-                                        supported by Chrome, Edge, Opera and Firefox */
 }
 .info-box1 i {
   color: #0084b9;
@@ -398,22 +267,10 @@ body header {
   margin-bottom: 5px;
   border-bottom: solid 1px rgba(150, 150, 150, 0.045);
 }
-.info-box1 p:last-child {
-  cursor: pointer;
-        /* Disable highlighted text */
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-          -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently
-                                      supported by Chrome, Edge, Opera and Firefox */
-}
 .info-box1 p a {
   text-decoration: none;
   color: var(--darkblue);
 }
-
 .info-box p a:hover {
   color: #86bbff;
 }
@@ -429,14 +286,6 @@ body header {
   border-radius: 20px;
   box-shadow: 0px 6px 12px var(--lightbshadow);
   z-index: 9999;
-          /* Disable highlighted text */
-          -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari */
-          -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Old versions of Firefox */
-              -ms-user-select: none; /* Internet Explorer/Edge */
-                  user-select: none; /* Non-prefixed version, currently
-                                        supported by Chrome, Edge, Opera and Firefox */
 }
 .info-box1 i {
   color: #0084b9;
@@ -445,17 +294,6 @@ body header {
 .info-box p {
   margin-bottom: 5px;
   border-bottom: solid 1px rgba(150, 150, 150, 0.045);
-}
-.info-box p:last-child {
-  cursor: pointer;
-        /* Disable highlighted text */
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-          -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently
-                                      supported by Chrome, Edge, Opera and Firefox */
 }
 .info-box p a {
   text-decoration: none;
@@ -526,14 +364,6 @@ body header {
   color: #444;
   font-family: 'Inter', sans-serif;
   text-align: center;
-        /* Disable highlighted text */
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-          -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently
-                                      supported by Chrome, Edge, Opera and Firefox */
 }
 #volume-txt {
   position: absolute;
@@ -542,14 +372,6 @@ body header {
   color: #444;
   font-family: 'Inter', sans-serif;
   text-align: center;
-        /* Disable highlighted text */
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-          -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently
-                                      supported by Chrome, Edge, Opera and Firefox */
 }
 .head-list {
   font-family: 'Inter', sans-serif;
@@ -691,7 +513,7 @@ body header {
   position: absolute;
 }
 #yw i {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   cursor: default;
 }
@@ -702,14 +524,12 @@ body header {
   left: 0;
   bottom: -55%;
   opacity: 0;
-  pointer-events: none;
   z-index: 5;
   padding: 15px 30px;
   border-radius: 15px;
   box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
   transition: all .2s;
   transition-timing-function: cubic-bezier(1, 0.26, 0, 0.73);
-  scroll-behavior: smooth;
 }
 .music-list.show{
   position: absolute;
@@ -808,14 +628,6 @@ ul li.playing{
   text-align: left;
   font: bold 16px sans-serif;
   padding: 55px 50px;
-      /* Disable highlighted text */
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-      -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
 }
 
 .footer-distributed .footer-left,
@@ -825,13 +637,9 @@ ul li.playing{
   vertical-align: top;
 }
 
-/* Footer left */
-
 .footer-distributed .footer-left{
   width: 40%;
 }
-
-/* The company logo */
 
 .footer-distributed h3{
   color:  #ffffff;
@@ -843,8 +651,6 @@ ul li.playing{
   color:  var(--primary-color);
   font-size: 24px;
 }
-
-/* Footer links */
 
 .footer-distributed .footer-links{
   color:  #ffffff;
@@ -873,17 +679,7 @@ ul li.playing{
   font-size: 14px;
   font-weight: normal;
   margin: 0;
-  /* Enable highlighted text */
-  -webkit-touch-callout: text; /* iOS Safari */
-  -webkit-user-select: text; /* Safari */
-  -khtml-user-select: text; /* Konqueror HTML */
-    -moz-user-select: text; /* Old versions of Firefox */
-      -ms-user-select: text; /* Internet Explorer/Edge */
-          user-select: text; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
 }
-
-/* Footer Center */
 
 .footer-distributed .footer-center{
   width: 35%;
@@ -910,14 +706,6 @@ ul li.playing{
   font-weight:400;
   vertical-align: middle;
   margin:0;
-  /* Enable highlighted text */
-  -webkit-touch-callout: text; /* iOS Safari */
-  -webkit-user-select: text; /* Safari */
-  -khtml-user-select: text; /* Konqueror HTML */
-    -moz-user-select: text; /* Old versions of Firefox */
-      -ms-user-select: text; /* Internet Explorer/Edge */
-          user-select: text; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
 }
 
 .footer-distributed .footer-center p span{
@@ -930,14 +718,6 @@ ul li.playing{
 .footer-distributed .footer-center p a{
   color:  #fff;
   text-decoration: none;
-  /* Enable highlighted text */
-  -webkit-touch-callout: text; /* iOS Safari */
-  -webkit-user-select: text; /* Safari */
-  -khtml-user-select: text; /* Konqueror HTML */
-    -moz-user-select: text; /* Old versions of Firefox */
-      -ms-user-select: text; /* Internet Explorer/Edge */
-          user-select: text; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
 }
 
 .footer-distributed .footer-center p a:hover{
@@ -957,8 +737,6 @@ ul li.playing{
   content: none;
 }
 
-/* Footer Right */
-
 .footer-distributed .footer-right{
   width: 20%;
 }
@@ -969,37 +747,8 @@ ul li.playing{
   font-size: 14px;
   font-weight: normal;
   margin: 0;
-  /* Enable highlighted text */
-  -webkit-touch-callout: text; /* iOS Safari */
-  -webkit-user-select: text; /* Safari */
-  -khtml-user-select: text; /* Konqueror HTML */
-    -moz-user-select: text; /* Old versions of Firefox */
-      -ms-user-select: text; /* Internet Explorer/Edge */
-          user-select: text; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
 }
 
-.footer-company-about span {
-    /* Enable highlighted text */
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-      -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-
-.footer-company-about #sign {
-    /* Enable highlighted text */
-    -webkit-touch-callout: text; /* iOS Safari */
-    -webkit-user-select: text; /* Safari */
-    -khtml-user-select: text; /* Konqueror HTML */
-      -moz-user-select: text; /* Old versions of Firefox */
-        -ms-user-select: text; /* Internet Explorer/Edge */
-            user-select: text; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
 
 .footer-distributed .footer-company-about span{
   display: block;
@@ -1095,8 +844,6 @@ ul li.playing{
   transition: all 0.3s ease 0s;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
-
 @media (max-width: 880px) {
 
   .footer-distributed{
@@ -1118,7 +865,6 @@ ul li.playing{
 
 }
 
-/* Responsive Audio Player */
 @media screen and (max-width: 480px) {
   .wrapper {
     width: 98vw;
