@@ -201,7 +201,27 @@ for (let i = 0; i < allMusic.length; i++) {
 }
 
 
+function playingSong(){
+  const allLiTag = ulTag.querySelectorAll("li");
+  
+  for (let j = 0; j < allLiTag.length; j++) {
+    let audioTag = allLiTag[j].querySelector(".audio-duration");
+    
+    if(allLiTag[j].classList.contains("playing")){
+      allLiTag[j].classList.remove("playing");
+      let adDuration = audioTag.getAttribute("t-duration");
+      audioTag.innerText = adDuration;
+    }
 
+    
+    if(allLiTag[j].getAttribute("li-index") == musicIndex){
+      allLiTag[j].classList.add("playing");
+      audioTag.innerText = "Đang phát";
+    }
+
+    allLiTag[j].setAttribute("onclick", "clicked(this)");
+  }
+}
 
 
 function clicked(element){
